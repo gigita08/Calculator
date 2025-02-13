@@ -1,10 +1,14 @@
 import { Component, signal } from '@angular/core';
 import { InvestmentService } from '../investment.service';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-user-input',
   templateUrl: './user-input.component.html',
   styleUrl: './user-input.component.css',
+  imports: [FormsModule, CommonModule],
+
 })
 export class UserInputComponent {
   enteredInitialInvestment = signal('0');
